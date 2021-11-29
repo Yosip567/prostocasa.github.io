@@ -123,7 +123,7 @@ input, select, textarea {
 
 	a {
 		color: #0090c5;
-		text-decoration: underline;
+		text-decoration: none;
 	}
 
 		a:hover {
@@ -189,7 +189,7 @@ input, select, textarea {
 	}
 
 	p, ul, ol, dl, table {
-		margin-bottom: 2em;
+		margin-bottom: 1.5em;
 	}
 
 /* Container */
@@ -1933,12 +1933,12 @@ input, select, textarea {
 
 /* Logo */
 
-	#logo {
+	.logo {
 		display: inline-block;
 	}
 
-		#logo h1 {
-			background: #ff4486;
+		.logo h1 {
+			background: #0090c5;
 			color: #fff;
 			border-radius: 6px;
 			font-family: 'Oleo Script', serif;
@@ -1950,7 +1950,7 @@ input, select, textarea {
 			vertical-align: middle;
 		}
 
-		#logo span {
+		.logo span {
 			font-weight: 800;
 			line-height: 4.5em;
 			letter-spacing: 0.025em;
@@ -1997,15 +1997,16 @@ input, select, textarea {
 				}
 
 				#nav ul li:hover a, #nav ul li:hover span {
-					background: #fff;
+					background: #0090c5;
+					color: #fff;
 				}
 
 				#nav ul li.active a, #nav ul li.active span {
-					background: #fff;
+					background: #0090c5;
 				}
 
 				#nav ul li.current a {
-					background: #444;
+					background: #0090c5;
 					color: #fff;
 				}
 
@@ -2264,7 +2265,7 @@ input, select, textarea {
 
 		/* Logo */
 
-			#logo span {
+			.logo span {
 				margin: 0;
 			}
 
@@ -2630,12 +2631,12 @@ input, select, textarea {
 
 		/* Logo */
 
-			#logo h1 {
+			.logo h1 {
 				font-size: 2.75em;
 				padding: 0.2em 0.275em;
 			}
 
-			#logo span {
+			.logo span {
 				line-height: 3em;
 			}
 
