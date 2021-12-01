@@ -1456,6 +1456,17 @@ input, select, textarea {
 
 		}
 
+
+
+
+
+
+
+
+
+
+
+
 /* Section/Article */
 
 	section, article {
@@ -1924,6 +1935,7 @@ input, select, textarea {
 
 	#footer-wrapper {
 		padding: 6em 0 8em 0;
+		border-top: solid 1px #ccc;
 	}
 
 /* Header */
@@ -1987,7 +1999,7 @@ input, select, textarea {
 					transition: background-color .25s ease-in-out;
 					font-weight: 800;
 					letter-spacing: 0.025em;
-					color: #696969;
+					color: #fff;
 					text-decoration: none;
 					border-radius: 6px;
 					padding: 0.5em 1em 0.5em 1em;
@@ -2125,17 +2137,9 @@ input, select, textarea {
 		#footer a {
 			color: inherit;
 		}
-
-	#copyright {
-		color: #aaa;
-		padding: 4em 0 0 0;
-		text-align: center;
-	}
-
-		#copyright a {
-			color: inherit;
-		}
-
+		#nav ul li:last-child {
+				margin-left: 240px;
+			}
 /* XLarge */
 
 	@media screen and (max-width: 1680px) {
@@ -2145,7 +2149,13 @@ input, select, textarea {
 			body, input, select, textarea {
 				font-size: 12pt;
 			}
-
+			
+			#nav ul li:last-child {
+				margin-left: 150px;
+			}
+			.none1680 {
+				display: none;
+			}
 	}
 
 /* Large */
@@ -2156,6 +2166,9 @@ input, select, textarea {
 
 			body, input, select, textarea {
 				font-size: 11pt;
+			}
+			#nav ul li:last-child {
+				margin-left: 25px;
 			}
 
 	}
@@ -2168,6 +2181,9 @@ input, select, textarea {
 
 	@media screen and (max-width: 980px) {
 
+		#nav ul li:last-child {
+				margin-left: 0px;
+			}
 		/* Basic */
 
 			html, body {
@@ -2305,15 +2321,6 @@ input, select, textarea {
 					margin-bottom: 0 !important;
 				}
 
-			#sidebar > :last-child {
-				margin-bottom: 0 !important;
-			}
-
-		/* Footer */
-
-			#copyright {
-				padding: 0;
-			}
 
 		/* Nav */
 
@@ -2328,134 +2335,6 @@ input, select, textarea {
 				transition: transform 0.5s ease;
 				padding-bottom: 1px;
 			}
-
-			#navToggle {
-				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				backface-visibility: hidden;
-				-moz-transition: -moz-transform 0.5s ease;
-				-webkit-transition: -webkit-transform 0.5s ease;
-				-ms-transition: -ms-transform 0.5s ease;
-				transition: transform 0.5s ease;
-				display: block;
-				height: 44px;
-				left: 0;
-				position: fixed;
-				top: 0;
-				width: 100%;
-				z-index: 10001;
-			}
-
-				#navToggle .toggle {
-					text-decoration: none;
-					width: 70px;
-					height: 50px;
-					opacity: 0.35;
-				}
-
-					#navToggle .toggle:before {
-						-moz-osx-font-smoothing: grayscale;
-						-webkit-font-smoothing: antialiased;
-						display: inline-block;
-						font-style: normal;
-						font-variant: normal;
-						text-rendering: auto;
-						line-height: 1;
-						text-transform: none !important;
-						font-family: 'Font Awesome 5 Free';
-						font-weight: 900;
-					}
-
-					#navToggle .toggle:before {
-						display: inline-block;
-						text-decoration: none;
-						position: absolute;
-						left: 6px;
-						top: 6px;
-						background: rgba(0, 0, 0, 0.5);
-						width: 58px;
-						height: 38px;
-						border-radius: 6px;
-						content: '\f0c9';
-						color: #fff;
-						text-align: center;
-						line-height: 38px;
-						font-size: 20px;
-					}
-
-					#navToggle .toggle:active {
-						opacity: 0.75;
-					}
-
-			#navPanel {
-				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				backface-visibility: hidden;
-				-moz-transform: translateX(-275px);
-				-webkit-transform: translateX(-275px);
-				-ms-transform: translateX(-275px);
-				transform: translateX(-275px);
-				-moz-transition: -moz-transform 0.5s ease;
-				-webkit-transition: -webkit-transform 0.5s ease;
-				-ms-transition: -ms-transform 0.5s ease;
-				transition: transform 0.5s ease;
-				display: block;
-				height: 100%;
-				left: 0;
-				overflow-y: auto;
-				position: fixed;
-				top: 0;
-				width: 275px;
-				z-index: 10002;
-				background: #fff;
-				box-shadow: inset -3px 0px 0px 0px #dfdfdf;
-				padding: 0 23px 0 20px;
-			}
-
-				#navPanel .link {
-					display: block;
-					text-decoration: none;
-					height: 54px;
-					line-height: 54px;
-					border-top: solid 1px #e8e8e8;
-					color: #696969;
-				}
-
-					#navPanel .link:first-child {
-						border-top: 0;
-					}
-
-				#navPanel .indent-1 {
-					display: inline-block;
-					width: 1em;
-				}
-
-				#navPanel .indent-2 {
-					display: inline-block;
-					width: 2em;
-				}
-
-				#navPanel .indent-3 {
-					display: inline-block;
-					width: 3em;
-				}
-
-				#navPanel .indent-4 {
-					display: inline-block;
-					width: 4em;
-				}
-
-				#navPanel .indent-5 {
-					display: inline-block;
-					width: 5em;
-				}
-
-				#navPanel .depth-0 {
-					color: #444;
-					font-weight: 800;
-				}
 
 			body.navPanel-visible #page-wrapper {
 				-moz-transform: translateX(275px);
@@ -2493,6 +2372,9 @@ input, select, textarea {
 			h2, h3, h4, h5, h6 {
 				font-size: 13pt;
 				margin: 0 0 1em 0;
+			}
+			.title {
+				font-size: 20pt;
 			}
 
 		/* Section/Article */
@@ -2681,11 +2563,6 @@ input, select, textarea {
 				padding-bottom: 3em;
 				margin-bottom: 1em !important;
 			}
-
-			#copyright {
-				text-align: left;
-			}
-
 	}
 
 .logo span {
@@ -2695,6 +2572,12 @@ input, select, textarea {
 	font-family: 'Oleo Script', serif;
 	line-height: 0;
 }
+
+#nav ul li a {
+	border-radius: 20px;
+	font-size: 18px;
+}
+
 
 #header-wrapper{
 	background-size: cover;
@@ -2707,7 +2590,7 @@ input, select, textarea {
     background-color: #00000096;
     width: 100%;
     height: 100%;
-    padding: 3em 0 1em 0;
+	padding: 25px;
 }
 #banner-wrapper {
 	text-align: center;
@@ -2715,7 +2598,7 @@ input, select, textarea {
 #banner {
 	width: 100%;
 	background: #f0f8ff00;	
-	padding: 250px 10px 250px 10px;		}
+	padding: 150px 10px 150px 10px;		}
 #banner h2, #banner p {
     color: #ffffff;
 }
